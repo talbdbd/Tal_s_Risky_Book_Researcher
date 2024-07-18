@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: google-books-search
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    plan: free
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        fromDatabase:
+          name: your-mongo-database
+          key: connectionString
