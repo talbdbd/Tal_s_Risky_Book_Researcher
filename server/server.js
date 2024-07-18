@@ -4,9 +4,13 @@ const { ApolloServer } = require('apollo-server-express');
 const { typeDefs, resolvers } = require('./schema');
 const db = require('./config/connection');
 const { authMiddleware } = require('./utils/auth');
+const cors = require('cors'); // Import cors
 
 const app = express();
 const PORT = process.env.PORT || 3001;
+
+// Add CORS middleware
+app.use(cors());
 
 // Apollo Server setup
 async function startApolloServer() {
