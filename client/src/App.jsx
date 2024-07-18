@@ -2,7 +2,11 @@ import './App.css';
 import { Outlet } from 'react-router-dom';
 import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
+import LoginForm from './components/LoginForm';
+import SignupForm from './components/SignupForm';
 import Navbar from './components/Navbar';
+import SavedBooks from './pages/SavedBooks';
+import SearchBooks from './pages/SearchBooks';
 
 // Set up the HTTP link
 const httpLink = createHttpLink({
@@ -29,6 +33,10 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
+      <SearchBooks />
+      <SavedBooks />
+      <LoginForm />
+      <SignupForm />
       <Navbar />
       <Outlet />
     </ApolloProvider>
