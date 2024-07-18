@@ -9,6 +9,4 @@ services:
       - key: NODE_ENV
         value: production
       - key: MONGODB_URI
-        fromDatabase:
-          name: your-mongo-database
-          key: connectionString
+        value: process.env.MONGODB_URI
