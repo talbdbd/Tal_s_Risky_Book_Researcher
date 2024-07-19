@@ -24,7 +24,7 @@ Node is required to install all packages and run the server and client.
 
 A simple book search engine that allows you to find books and add them to your account.
 Link:
-![Screenshot](<imagepathway>)
+![Screenshot](./client/src/assets/Screenshot%202024-07-18%20at%205.57.41 PM.png)
 
 ## Credits
 
